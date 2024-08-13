@@ -1,0 +1,191 @@
+@import '../../styles/main';
+
+.card {
+    @include flex-center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 390px;
+    height: 430px;
+    border: none;
+    border-radius: 25px;
+    @include box-shadow;
+    background-color: white;
+    transition: all 0.5s;
+
+    &.collapse {
+        height: 130px;
+    }
+
+    .header {
+        width: 100%;
+        @include flex-center;
+        justify-content: space-between;
+        border-radius: 25px 25px 0 0;
+        border-bottom: solid 1px #e8e8e8;
+        padding: 15px 15px 5px 15px;
+        background-color: transparent;
+
+
+        .create_card {
+            cursor: pointer;
+            user-select: none;
+            display: none;
+            width: 100%;
+
+            &:hover {
+                text-decoration: underline;
+                background-color: transparent;
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+
+        input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-weight: bold;
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            @include flex-center;
+        }
+
+        button:hover {
+            background-color: $hover-color;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+    }
+
+    .body {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 15px 30px;
+            overflow: auto;
+            resize: none;
+            background-color: transparent;
+
+            &.collapse {
+                height: 80%;
+            }
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 7px;
+            height: 12px;
+        }
+
+        textarea::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background: #e8e8e8;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        textarea::-webkit-scrollbar-thumb:hover {
+            background: gray;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        padding: 10px 10px;
+        @include flex-center;
+        justify-content: space-between;
+        position: relative;
+
+        .btn_icon {
+            width: 30px;
+            height: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            margin: 0px 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+
+
+
+            img {
+                margin: 5px;
+            }
+
+            &:hover,
+            &.active {
+                background-color: $hover-color;
+            }
+        }
+
+        .chooseColors {
+            @include flex-center;
+            @include box-shadow;
+            flex-direction: row;
+            position: absolute;
+            padding: 5px;
+            gap: 5px;
+            top: 45px;
+            left: 60px;
+
+            .btn_colors {
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                border: none;
+
+                &:hover,
+                &.active {
+                    @include box-shadow;
+                    border: solid 1px $border-color;
+                }
+
+            }
+        }
+
+        .container_save {
+            width: 100%;
+            @include flex-center;
+
+            .save_changes {
+                cursor: pointer;
+                user-select: none;
+                display: none;
+                background-color: transparent;
+                border: none;
+
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+
+        button:last-of-type {
+            float: right;
+        }
+    }
+}

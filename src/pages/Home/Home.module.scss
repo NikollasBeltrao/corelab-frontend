@@ -1,0 +1,47 @@
+@import '../../styles/break-points.scss';
+@import '../../styles/main';
+
+
+.user_name {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+}
+.home_page {
+    width: 100%;
+    min-height: 100vh;
+    @include flex-center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: $background-color;
+    font-family: $font-family;
+    padding: 100px 0px;
+
+    h6 {
+        width: 100%;
+        margin-top: 40px;
+        font-size: 12px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .container_cards {
+        width: 100%;
+        @include flex-center;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    @include laptop {
+        h6 {
+            padding-left: 60px;
+            text-align: left;
+        }
+
+        .container_cards {
+            justify-content: start;
+            padding: 0px 40px 0px 40px;
+        }
+    }
+}
