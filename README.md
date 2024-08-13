@@ -61,19 +61,19 @@ DB_PASSWORD=root
 #### Caso use docker
 
 - Crie o container com `docker compose build` ou usando o *Makefile* `make build`.
-- Instale as dependências  do composer com `docker compose exec api composer install` ou usando o *Makefile* `make composer-install`.
 - Inicie o container com `docker compose up` ou usando o *Makefile* `make up`.
+- Instale as dependências  do composer com `docker compose exec api composer install` ou usando o *Makefile* `make composer-install`.
 - Crie as tabelas no banco com `docker compose exec api php artisan migrate` ou  usando o *Makefile* `make migrate`.
 - Gere uma `APP_KEY` no laravel com `docker compose exec api php artisan key:generate`  ou  usando o *Makefile* `make key-generate`.
-- Teste o phpMyAdmin abrindo `http://localhost:8001/` no navegador.
-- Teste o projeto abrindo `http://localhost:8000/` no navegador.
+- Teste o phpMyAdmin abrindo [http://localhost:8001/](http://localhost:8001/) no navegador.
+- Teste o projeto abrindo [http://localhost:8000/](http://localhost:8000/) no navegador.
 
 #### Caso não use docker
 - Instale as dependências  do composer com `composer install`.
 - Crie as tabelas no banco com `php artisan migrate`.
 - Inicie o projeto com `php artisan serve`.
 - Gere uma `APP_KEY` no laravel com `php artisan key:generate`.
-- Teste o projeto abrindo `http://localhost:8000/` no navegador.
+- Teste o projeto abrindo [http://localhost:8000/](http://localhost:8000/) no navegador.
 
 **OBS: Dependendo da versão do docker o comando pode ser `docker-compose`.**
 
@@ -88,4 +88,4 @@ DB_PASSWORD=root
 #### Caso não use docker
 - Instale as dependencias do node com `npm install`.
 - Inicie o projeto com `npm start`.
-- Acesse o projeto abrindo `http://localhost:3000/` no navegador.
+- Acesse o projeto abrindo [http://localhost:3000/](http://localhost:3000/) no navegador.
