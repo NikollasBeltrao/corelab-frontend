@@ -70,8 +70,8 @@ DB_PASSWORD=root
 
 #### Caso não use docker
 - Instale as dependências  do composer com `composer install`.
-- Crie as tabelas no banco com `php artisan migrate`.
 - Inicie o projeto com `php artisan serve`.
+- Crie as tabelas no banco com `php artisan migrate`.
 - Gere uma `APP_KEY` no laravel com `php artisan key:generate`.
 - Teste o projeto abrindo [http://localhost:8000/](http://localhost:8000/) no navegador.
 
