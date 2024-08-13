@@ -1,9 +1,13 @@
 version: '3.8'
 services:
-  web:
+  app:
     image: node:20
+    build: 
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - "./:/usr/src/app"
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
     working_dir: /usr/src/app
     ports:
       - "3000:3000"

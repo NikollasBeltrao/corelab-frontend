@@ -70,7 +70,7 @@ const HomePage: React.FC = () => {
 
     useEffect(() => {
         getContent();
-    }, [])
+    }, [id_user])
 
     useEffect(() => {
         if (alertConfig.show) {

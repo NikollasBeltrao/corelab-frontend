@@ -238,7 +238,7 @@ const CardComponent: React.FC<CardProps> = ({ card, isAddCard, isLoading, change
                                     return (
                                         <button
                                             key={bg_color}
-                                            className={`${styles.btn_colors} ${(bg_color == cardForm.color ? styles.active : '')}`}
+                                            className={`${styles.btn_colors} ${(bg_color === cardForm.color ? styles.active : '')}`}
                                             style={{ backgroundColor: bg_color }}
                                             onClick={() => {
                                                 setHasChanges(true);
